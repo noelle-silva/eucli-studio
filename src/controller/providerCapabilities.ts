@@ -1,6 +1,6 @@
 import { now } from '../core/utils'
 import { normalizeProviderCapabilities, type ProviderCapabilities } from '../domain/providerCapabilities'
-import { refreshScopes } from '../ui/refreshScopes'
+import { refreshScopes } from '../domain/uiRefreshScope'
 
 // 能力清单是静态事实，只在页面打开时取一次，缓存窗口取得比模型组更宽。
 const PROVIDER_CAPABILITIES_CACHE_MS = 300_000
