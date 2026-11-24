@@ -39,7 +39,7 @@ function resolveDecodeEntry() {
 export default defineConfig({
   root: benchRoot,
   // 基准页不需要 Fast Refresh，直接用 esbuild 的 automatic JSX。
-  // 这样也避开 @vitejs/plugin-react 在 pnpm 严格布局下的 Babel 解析链。
+  // 这样也避开 @vitejs/plugin-react 的 Babel 解析链。
   esbuild: {
     jsx: 'automatic',
   },

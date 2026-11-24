@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitest/config'
 
-// 性能基准专用配置：只跑 *.perf.test.ts，给足超时，供 `pnpm test:perf` 单独驱动。
+// 性能基准专用配置：只跑 *.perf.test.ts，给足超时，供 `npm run test:perf` 单独驱动。
 // 通过环境变量 PERF_PROFILE=smoke|stress|brutal 选择负载档位（默认 stress）。
 export default defineConfig({
   test: {

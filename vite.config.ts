@@ -16,7 +16,7 @@ type DepOptimizePlugin = NonNullable<NonNullable<DepOptimizationConfig['esbuildO
 // 当前安装版本（1.3.0）的 exports 只有条件键，没有 "./*" 通配，子路径无法解析。
 //
 // 这里先按正常规则解析出真实入口，再把同目录下的 index.dom.js 换成纯 JS 的
-// index.js。路径来自实际解析结果，不绑定 .pnpm 或具体版本号；若未来版本缺少
+// index.js。路径来自实际解析结果，不绑定特定包管理器目录布局或具体版本号；若未来版本缺少
 // 该文件则立即报错，避免静默退回 DOM 实现。
 // ============================================================================
 function pureDecodeNamedCharacterReference(): Plugin {
