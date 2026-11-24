@@ -1,5 +1,6 @@
 import { now } from '../core/utils'
 import { normalizeProviderCapabilities, type ProviderCapabilities } from '../domain/providerCapabilities'
+import { refreshScopes } from '../ui/refreshScopes'
 
 // 能力清单是静态事实，只在页面打开时取一次，缓存窗口取得比模型组更宽。
 const PROVIDER_CAPABILITIES_CACHE_MS = 300_000
@@ -11,7 +12,7 @@ const PROVIDER_CAPABILITIES_CACHE_MS = 300_000
 export function createProviderCapabilitiesController(deps: {
   getState: () => any
   netRequest: (req: any) => Promise<any>
-  emit: () => void
+  emitScope: (scope: string) => void
 }) {
   function currentBox() {
     const state = deps.getState()
@@ -40,12 +41,12 @@ export function createProviderCapabilitiesController(deps: {
       if (status < 200 || status >= 300) throw new Error(`HTTP ${status}`)
       const value = normalizeProviderCapabilities(response?.body)
       patchBox({ error: '', value, fetchedAt: now() })
-      deps.emit()
+      deps.emitScope(refreshScopes.entities('providers'))
       return value
     } catch (e: any) {
       const error = String(e?.message || e || '加载能力清单失败')
       patchBox({ error })
-      deps.emit()
+      deps.emitScope(refreshScopes.entities('providers'))
       return { protocols: [], reasoningEfforts: [] }
     }
   }
