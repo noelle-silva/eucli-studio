@@ -35,7 +35,7 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.6",
     "@mui/material": "^7.3.6",
-    "@tauri-apps/api": "^2.11.0",
+    "@tauri-apps/api": "~2.11.0",
     "culori": "^4.0.2",
     "dompurify": "^3.0.11",
     "katex": "^0.16.11",
@@ -54,7 +54,7 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2.11.0",
+    "@tauri-apps/cli": "~2.11.0",
     "@types/culori": "^4.0.1",
     "@types/node": "^25.6.0",
     "@types/react": "^18.2.0",
