@@ -818,7 +818,7 @@ export function createAiChatControllerV2(deps: { capabilities: AiChatCapabilitie
   const providerCapabilitiesController = createProviderCapabilitiesController({
     getState: () => state,
     netRequest: capabilities.net?.request || ((() => Promise.resolve({})) as any),
-    emit: emitEntity('providers'),
+    emitScope,
   })
   const { loadProviderCapabilities } = providerCapabilitiesController
   const {
