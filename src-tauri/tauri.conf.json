@@ -4,9 +4,9 @@
   "version": "0.7.2",
   "identifier": "com.fastwindow.euclistudio",
   "build": {
-    "beforeDevCommand": "pnpm dev",
+    "beforeDevCommand": "npm run dev",
     "devUrl": "http://127.0.0.1:1431",
-    "beforeBuildCommand": "pnpm build:ui",
+    "beforeBuildCommand": "npm run build:ui",
     "frontendDist": "../dist"
   },
   "app": {
