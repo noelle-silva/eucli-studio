@@ -11,7 +11,7 @@ import {
 // 每新增一个调用点都会让壳层整块重渲染；`emitScope` / `emitScopes` 才是迁移方向。
 //
 // 基线生成方式（只在阶段锚点 137422c5 上跑过一次）：
-//   1. loadContractSourceFiles() 读取 apps/eucli-studio/src 下全部非测试源码；
+//   1. loadContractSourceFiles() 读取 src/ 下全部非测试源码；
 //   2. 用 TypeScript AST 收集 CallExpression，而不是正则，注释/字符串不会误命中；
 //   3. emit 计数 = 方法名 `emit` 且零参数的调用；
 //      scope 计数 = 方法名 `emitScope` 或 `emitScopes` 的调用；

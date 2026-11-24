@@ -4,7 +4,7 @@
 
 ## 一条命令
 
-在 `apps/eucli-studio` 下执行：
+在仓库根目录执行：
 
 ```bash
 node bench/run-bench.mjs
@@ -32,7 +32,7 @@ node bench/run-bench.mjs --url http://127.0.0.1:1459/   # 复用已启动的页�
 ## 依赖说明
 
 - Node 22+（脚本使用内置全局 `WebSocket` 直连 CDP）。
-- 应用现有的 `vite`、`react`、`@mui/material` 等依赖（复用 `apps/eucli-studio/node_modules`）。
+- 应用现有的 `vite`、`react`、`@mui/material` 等依赖（复用仓库根目录的 `node_modules`）。
 - 本机安装 Chrome 或 Edge。
 
 **不需要** `playwright` / `puppeteer`，不新增 `bench/package.json`，不改应用 `package.json` 与锁文件。

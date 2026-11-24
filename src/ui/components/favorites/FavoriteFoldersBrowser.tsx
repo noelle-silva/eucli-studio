@@ -13,7 +13,7 @@ import { ChatSessionRunIndicator, type ChatSessionRunIndicatorKind } from '../Ch
 import { EntityAvatar } from '../avatar/EntityAvatar'
 import { SortableItem, SortableRoot, SortableSection, type SortableItemRenderArgs } from '../SortableDnd'
 
-// 会话收藏夹的层级浏览：照搬 hypercortex 收藏夹侧边栏的形态——
+// 会话收藏夹的层级浏览模型——
 // 不展开收起，点收藏夹直接进入下一层；返回按钮落在分类自己的工具行最左侧。
 // 行样式沿用同一套节奏：36 高、4 点圆角、图标 + 单行标题、悬停与选中用主色淡底。
 // 拖拽：默认同层排序；按住 Ctrl 拖动切到放置模式，悬停收藏夹松手把会话移进去。

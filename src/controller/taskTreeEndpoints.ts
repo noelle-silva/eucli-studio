@@ -1,7 +1,7 @@
 import type { TaskScope } from '../domain/taskTree'
 import { fillPath, withQuery, type EbNetRequest, type PathQuery } from './netPath'
 
-// 任务树的请求底座：端点表与 apps/eucli-box/src/gateway-system/routes.go 一一对应。
+// 任务树的请求底座：端点表与服务端网关的任务树路由契约一一对应。
 // 与提示词库同一套规则：作用域走路径、归属 id 走查询参数，路径拼装交给 netPath。
 
 const API_PREFIX = '/api/'

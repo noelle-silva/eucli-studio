@@ -1,5 +1,5 @@
 // 收藏夹层级导航：纯逻辑，不依赖 React 与实体类型。
-// 照搬 hypercortex 的收藏夹导航模型（favoritesNavigator），只保留「下钻 + 返回」两条路径：
+// 收藏夹层级导航模型：只保留「下钻 + 返回」两条路径：
 // 会话收藏夹侧边栏直接进入下一层，返回按钮沿来路回退。
 
 export type FavoriteFolderNav = {

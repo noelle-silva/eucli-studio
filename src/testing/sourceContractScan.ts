@@ -15,7 +15,7 @@ const DEFAULT_SOURCE_ROOT = join(APP_ROOT, 'src')
 const SOURCE_EXTENSIONS = new Set(['.ts', '.tsx'])
 
 export type ContractSourceFile = {
-  /** 相对 apps/eucli-studio 的路径，使用 / 分隔，便于跨平台断言。 */
+  /** 相对仓库根目录的路径，使用 / 分隔，便于跨平台断言。 */
   relPath: string
   text: string
 }
@@ -40,7 +40,7 @@ export type CallMatch = {
 }
 
 export type SourceScanOptions = {
-  /** 默认 apps/eucli-studio/src。 */
+  /** 默认仓库根目录下的 src/。 */
   root?: string
   /** 默认 false：测试文件与 src/testing 辅助区不进入生产契约扫描。 */
   includeTests?: boolean

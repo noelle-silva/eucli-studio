@@ -3,9 +3,8 @@ import { fillPath, withQuery, type EbNetRequest, type PathQuery } from './netPat
 
 // 提示词库的请求底座：端点表 + 统一的路径拼装与请求发送。
 //
-// 端点表与 apps/eucli-box/src/gateway-system/routes.go 的注册一一对应，
-// 顺序也按那边排列。改后端路由时，这张表必须同步；路径参数统一写成 :name，
-// 由 fillPath 负责取值与编码，调用方不再自己拼字符串。
+// 端点表与服务端网关的提示词库路由契约一一对应，改服务端路由时，这张表必须同步；
+// 路径参数统一写成 :name，由 fillPath 负责取值与编码，调用方不再自己拼字符串。
 
 export type { EbNetRequest } from './netPath'
 export type PromptQuery = PathQuery

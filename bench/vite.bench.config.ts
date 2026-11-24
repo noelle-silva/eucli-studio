@@ -6,7 +6,6 @@ import { defineConfig } from 'vite'
 
 const benchRoot = fileURLToPath(new URL('.', import.meta.url))
 const appRoot = path.resolve(benchRoot, '..')
-const repoRoot = path.resolve(appRoot, '..', '..')
 
 function realOrSelf(target: string) {
   try {
@@ -31,7 +30,7 @@ function resolveDecodeEntry() {
       return appRequire.resolve('decode-named-character-reference')
     } catch {
       throw new Error(
-        'bench 无法定位 decode-named-character-reference。请在 apps/eucli-studio 下确认依赖已安装（本脚本不会执行安装）。',
+        'bench 无法定位 decode-named-character-reference。请在仓库根目录确认依赖已安装（本脚本不会执行安装）。',
       )
     }
   }
@@ -60,9 +59,7 @@ export default defineConfig({
       allow: [
         benchRoot,
         appRoot,
-        repoRoot,
         realOrSelf(path.join(appRoot, 'node_modules')),
-        realOrSelf(path.join(repoRoot, 'node_modules')),
       ],
     },
   },
